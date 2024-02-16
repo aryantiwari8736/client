@@ -7,7 +7,6 @@ export const analyticsApi = apiSlice.injectEndpoints({
                 url: 'get-courses-analytics',
                 method: 'GET',
                 credentials: 'include' as const,
-                mode:"cors"
             }),
         }),
         getUsersAnalytics: builder.query({
@@ -15,7 +14,6 @@ export const analyticsApi = apiSlice.injectEndpoints({
                 url: 'get-users-analytics',
                 method: 'GET',
                 credentials: 'include' as const,
-                mode:"cors"
             })
         }),
         getOrdersAnalytics: builder.query({
@@ -23,7 +21,6 @@ export const analyticsApi = apiSlice.injectEndpoints({
                 url: 'get-orders-analytics',
                 method: 'GET',
                 credentials: 'include' as const,
-                mode:"cors"
             })
         }),
     }),

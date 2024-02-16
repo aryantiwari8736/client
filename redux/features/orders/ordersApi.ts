@@ -6,7 +6,6 @@ export const ordersApi = apiSlice.injectEndpoints({
       query: (type) => ({
         url: `get-orders`,
         method: "GET",
-        mode:"cors",
         credentials: "include" as const,
       }),
     }),
@@ -14,7 +13,6 @@ export const ordersApi = apiSlice.injectEndpoints({
       query: () => ({
         url: `payment/stripepublishablekey`,
         method: "GET",
-        mode:"cors",
         credentials: "include" as const,
       }),
     }),
@@ -25,7 +23,6 @@ export const ordersApi = apiSlice.injectEndpoints({
         body: {
           amount,
         },
-        mode:"cors",
         credentials: "include" as const,
       }),
     }),
@@ -37,7 +34,6 @@ export const ordersApi = apiSlice.injectEndpoints({
           payment_info,
         },
         method: "POST",
-        mode:"cors",
         credentials: "include" as const,
       }),
     }),

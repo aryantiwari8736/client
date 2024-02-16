@@ -6,7 +6,6 @@ export const layoutApi = apiSlice.injectEndpoints({
       query: (type) => ({
         url: `get-layout/${type}`,
         method: "GET",
-        mode:"cors",
         credentials: "include" as const,
       }),
     }),
@@ -23,7 +22,6 @@ export const layoutApi = apiSlice.injectEndpoints({
         },
         method: "PUT",
         credentials: "include" as const,
-        mode:"cors",
       }),
     }),
   }),

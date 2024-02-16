@@ -16,7 +16,6 @@ export const authApi = apiSlice.injectEndpoints({
         url: "registration",
         method: "POST",
         body: data,
-        mode:"cors",
         credentials: "include" as const,
       }),
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
@@ -36,12 +35,10 @@ export const authApi = apiSlice.injectEndpoints({
       query: ({ activation_token, activation_code }) => ({
         url: "activate-user",
         method: "POST",
-        
         body: {
           activation_token,
           activation_code,
         },
-        mode:"cors",
       }),
     }),
     login: builder.mutation({
@@ -52,7 +49,6 @@ export const authApi = apiSlice.injectEndpoints({
           email,
           password,
         },
-        mode:"cors",
         credentials: "include" as const,
       }),
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
@@ -78,7 +74,6 @@ export const authApi = apiSlice.injectEndpoints({
           name,
           avatar,
         },
-        mode:"cors",
         credentials: "include" as const,
       }),
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
@@ -100,7 +95,6 @@ export const authApi = apiSlice.injectEndpoints({
         url: "logout",
         method: "GET",
         credentials: "include" as const,
-        mode:"cors",
       }),
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
