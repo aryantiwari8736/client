@@ -5,16 +5,12 @@ export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.NEXT_PUBLIC_SERVER_URI,
-    credentials: "same-origin", 
+    mode: "cors",
     prepareHeaders: (headers) => {
-        const accessToken = localStorage.getItem("token");
-        if (accessToken) {
-            headers.set("authorization", `Bearer ${accessToken}`);
-            headers.set("Content-Type", "application/json");
-        }
-
-        return headers;
-      },
+      headers.set('Access-Control-Allow-Origin', '*') 
+      headers.set('Access-Control-Allow-Headers', '*') 
+      return headers
+    },
   }),
   endpoints: (builder) => ({
     refreshToken: builder.query({
