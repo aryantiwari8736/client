@@ -5,12 +5,7 @@ export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.NEXT_PUBLIC_SERVER_URI,
-    mode: "cors",
-    prepareHeaders: (headers) => {
-      headers.set('Access-Control-Allow-Origin', '*') 
-      headers.set('Access-Control-Allow-Headers', '*') 
-      return headers
-    },
+    mode: "cors"
   }),
   endpoints: (builder) => ({
     refreshToken: builder.query({
