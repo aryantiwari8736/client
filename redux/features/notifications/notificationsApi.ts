@@ -6,6 +6,7 @@ export const notificationsApi = apiSlice.injectEndpoints({
       query: () => ({
         url: "get-all-notifications",
         method: "GET",
+        mode:"cors",
         credentials: "include" as const,
       }),
     }),
@@ -13,6 +14,7 @@ export const notificationsApi = apiSlice.injectEndpoints({
       query: (id) => ({
         url: `/update-notification/${id}`,
         method: "PUT",
+        mode:"cors",
         credentials: "include" as const,
       }),
     }),

@@ -7,6 +7,7 @@ export const userApi = apiSlice.injectEndpoints({
         url: "update-user-avatar",
         method: "PUT",
         body: { avatar },
+        mode:"cors",
         credentials: "include" as const,
       }),
     }),
@@ -17,6 +18,7 @@ export const userApi = apiSlice.injectEndpoints({
         body: {
           name,
         },
+        mode:"cors",
         credentials: "include" as const,
       }),
     }),
@@ -28,6 +30,7 @@ export const userApi = apiSlice.injectEndpoints({
           oldPassword,
           newPassword,
         },
+        mode:"cors",
         credentials: "include" as const,
       }),
     }),
@@ -35,6 +38,7 @@ export const userApi = apiSlice.injectEndpoints({
       query: () => ({
         url: "get-users",
         method: "GET",
+        mode:"cors",
         credentials: "include" as const,
       }),
     }),
@@ -43,6 +47,7 @@ export const userApi = apiSlice.injectEndpoints({
         url: "update-user",
         method: "PUT",
         body: { email, role },
+        mode:"cors",
         credentials: "include" as const,
       }),
     }),
@@ -50,6 +55,7 @@ export const userApi = apiSlice.injectEndpoints({
       query: (id) => ({
         url: `delete-user/${id}`,
         method: "DELETE",
+        mode:"cors",
         credentials: "include" as const,
       }),
     }),

@@ -5,13 +5,6 @@ export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.NEXT_PUBLIC_SERVER_URI,
-    mode:"cors",
-     prepareHeaders: (headers) => {
-      headers.set('Access-Control-Allow-Origin', '*')
-      // headers.set('Access-Control-Allow-Methods', 'GET') //
-      // headers.set('Access-Control-Allow-Headers', '*') //
-      return headers
-    },
   }),
   endpoints: (builder) => ({
     refreshToken: builder.query({
@@ -19,6 +12,8 @@ export const apiSlice = createApi({
         url: "refresh",
         method: "GET",
         credentials: "include" as const,
+        mode:"cors"
+
       }),
     }),
     loadUser: builder.query({
@@ -26,6 +21,7 @@ export const apiSlice = createApi({
         url: "me",
         method: "GET",
         credentials: "include" as const,
+        mode:"cors"
       }),
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
@@ -34,6 +30,7 @@ export const apiSlice = createApi({
             userLoggedIn({
               accessToken: result.data.accessToken,
               user: result.data.user,
+              
             })
           );
         } catch (error: any) {
