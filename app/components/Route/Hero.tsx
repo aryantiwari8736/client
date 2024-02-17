@@ -22,25 +22,26 @@ return (
         <p className="mb-6 max-w-lg text-base text-[#636262] ">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus</p>
        <div className="flex items-center my-4 gap-x-3">
         <Button  className="bg-[#002A5E] dark:bg-white">
-                    Corportate
+                    Join Us 
                 </Button>
                 <Button   onClick={()=>setOpen(true)} className="dark:bg-white bg-[#002A5E]">
-                    Join Us
+                Book a Consultation
                 </Button>
             </div>
         
         <div className="grid w-full grid-flow-row grid-cols-3 gap-4">
           <div>
-            <h3 className="text-2xl dark:text-white font-bold text-[#276ef1] md:text-3xl"><CountUp start={0} end={10000} duration={10} suffix='+' /></h3>
+            <h3 className="text-2xl dark:text-white font-bold text-[#276ef1] md:mr-[10px] md:text-3xl"><CountUp start={0} end={10000} duration={10} suffix='+' /></h3>
             <p className="text-sm dark:text-[#c4bebe] text-[#636262]">Community</p>
+          </div>
+          
+          <div>
+            <h3 className="text-2xl dark:text-white font-bold text-[#276ef1] md:text-3xl"><CountUp start={0} end={2000} duration={10} suffix='+' /></h3>
+            <p className="text-sm dark:text-[#c4bebe] text-[#636262]">Trainee</p>
           </div>
           <div>
             <h3 className="text-2xl dark:text-white font-bold text-[#276ef1] md:text-3xl"><CountUp start={0} end={50} duration={10} suffix='+' /></h3>
             <p className="text-sm dark:text-[#c4bebe] text-[#636262]">Partners</p>
-          </div>
-          <div>
-            <h3 className="text-2xl dark:text-white font-bold text-[#276ef1] md:text-3xl"><CountUp start={0} end={2000} duration={10} suffix='+' /></h3>
-            <p className="text-sm dark:text-[#c4bebe] text-[#636262]">Trainee</p>
           </div>
         </div>
       </div>

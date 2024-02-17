@@ -7,6 +7,7 @@ import Courses from "./components/Route/Courses";
 import Reviews from "./components/Route/Reviews";
 import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer";
+import Howwework from "./components/home/Howwework";
 
 interface Props {}
 
@@ -30,6 +31,7 @@ const Page: FC<Props> = (props) => {
         route={route}
       />
       <Hero setOpen={setOpen}/>
+      <Howwework/>
       <Courses />
       <Reviews />
       <FAQ />
