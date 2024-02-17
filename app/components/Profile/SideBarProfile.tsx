@@ -38,9 +38,9 @@ const SideBarProfile: FC<Props> = ({
           alt=""
           width={20}
           height={20}
-          className="w-[20px] h-[20px] 800px:w-[30px] 800px:h-[30px] cursor-pointer rounded-full"
+          className="w-[20px] h-[20px] md:w-[30px] md:h-[30px] cursor-pointer rounded-full"
         />
-        <h5 className="pl-2 800px:block hidden font-Poppins dark:text-white text-black">
+        <h5 className="pl-2 md:block hidden font-Poppins dark:text-white text-black">
           My Account
         </h5>
       </div>
@@ -51,7 +51,7 @@ const SideBarProfile: FC<Props> = ({
         onClick={() => setActive(2)}
       >
         <RiLockPasswordLine size={20} className="dark:text-white text-black"  />
-        <h5 className="pl-2 800px:block hidden font-Poppins dark:text-white text-black">
+        <h5 className="pl-2 md:block hidden font-Poppins dark:text-white text-black">
           Change Password
         </h5>
       </div>
@@ -62,7 +62,7 @@ const SideBarProfile: FC<Props> = ({
         onClick={() => setActive(3)}
       >
         <SiCoursera size={20} className="dark:text-white text-black"  />
-        <h5 className="pl-2 800px:block hidden font-Poppins dark:text-white text-black">
+        <h5 className="pl-2 md:block hidden font-Poppins dark:text-white text-black">
           Enrolled Courses
         </h5>
       </div>
@@ -74,7 +74,7 @@ const SideBarProfile: FC<Props> = ({
           href={"/admin"}
         >
           <MdOutlineAdminPanelSettings size={20} className="dark:text-white text-black"  />
-          <h5 className="pl-2 800px:block hidden font-Poppins dark:text-white text-black">
+          <h5 className="pl-2 md:block hidden font-Poppins dark:text-white text-black">
             Admin Dashboard
           </h5>
         </Link>
@@ -86,7 +86,7 @@ const SideBarProfile: FC<Props> = ({
         onClick={() => logOutHandler()}
       >
         <AiOutlineLogout size={20} className="dark:text-white text-black" />
-        <h5 className="pl-2 800px:block hidden font-Poppins dark:text-white text-black">
+        <h5 className="pl-2 md:block hidden font-Poppins dark:text-white text-black">
           Log Out
         </h5>
       </div>

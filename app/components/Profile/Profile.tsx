@@ -54,7 +54,7 @@ const Profile: FC<Props> = ({ user }) => {
   return (
     <div className="w-[85%] flex mx-auto">
       <div
-        className={`w-[60px] 800px:w-[310px] h-[450px] dark:bg-slate-900 bg-opacity-90 border bg-white dark:border-[#ffffff1d] border-[#00000014] rounded-[5px] shadow-sm dark:shadow-sm mt-[80px] mb-[80px] sticky ${
+        className={`w-[60px] md:w-[310px] h-[450px] dark:bg-slate-900 bg-opacity-90 border bg-white dark:border-[#ffffff1d] border-[#00000014] rounded-[5px] shadow-sm dark:shadow-sm mt-[80px] mb-[80px] sticky ${
           scroll ? "top-[120px]" : "top-[30px]"
         } left-[30px]`}
       >
@@ -79,7 +79,7 @@ const Profile: FC<Props> = ({ user }) => {
       )}
 
       {active === 3 && (
-        <div className="w-full pl-7 px-2 800px:px-10 800px:pl-8 mt-[80px]">
+        <div className="w-full pl-7 px-2 md:px-10 md:pl-8 mt-[80px]">
           <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-3 lg:gap-[25px] 1500px:grid-cols-4 1500px:gap-[35px] mb-12 border-0">
             {courses &&
               courses.map((item: any, index: number) => (

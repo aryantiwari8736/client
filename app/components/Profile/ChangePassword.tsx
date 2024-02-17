@@ -33,8 +33,8 @@ const ChangePassword: FC<Props> = (props) => {
   }, [isSuccess, error]);
 
   return (
-    <div className="w-full pl-7 px-2 800px:px-5 800px:pl-0">
-      <h1 className="block text-[25px] 800px:text-[30px] font-Poppins text-center font-[500] text-black dark:text-[#fff] pb-2">
+    <div className="w-full pl-7 px-2 md:px-5 md:pl-0">
+      <h1 className="block text-[25px] md:text-[30px] font-Poppins text-center font-[500] text-black dark:text-[#fff] pb-2">
         Change Password
       </h1>
       <div className="w-full">
@@ -43,37 +43,37 @@ const ChangePassword: FC<Props> = (props) => {
           onSubmit={passwordChangeHandler}
           className="flex flex-col items-center"
         >
-          <div className=" w-[100%] 800px:w-[60%] mt-5">
+          <div className=" w-[100%] md:w-[60%] mt-5">
             <label className="block pb-2 text-black dark:text-[#fff]">
               Enter your old password
             </label>
             <input
               type="password"
-              className={`${styles.input} !w-[95%] mb-4 800px:mb-0 text-black dark:text-[#fff]`}
+              className={`${styles.input} !w-[95%] mb-4 md:mb-0 text-black dark:text-[#fff]`}
               required
               value={oldPassword}
               onChange={(e) => setOldPassword(e.target.value)}
             />
           </div>
-          <div className=" w-[100%] 800px:w-[60%] mt-2">
+          <div className=" w-[100%] md:w-[60%] mt-2">
             <label className="block pb-2 text-black dark:text-[#fff]">
               Enter your new password
             </label>
             <input
               type="password"
-              className={`${styles.input} !w-[95%] mb-4 800px:mb-0 text-black dark:text-[#fff]`}
+              className={`${styles.input} !w-[95%] mb-4 md:mb-0 text-black dark:text-[#fff]`}
               required
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
             />
           </div>
-          <div className=" w-[100%] 800px:w-[60%] mt-2">
+          <div className=" w-[100%] md:w-[60%] mt-2">
             <label className="block pb-2 text-black dark:text-[#fff]">
               Enter your confirm password
             </label>
             <input
               type="password"
-              className={`${styles.input} !w-[95%] mb-4 800px:mb-0 text-black dark:text-[#fff]`}
+              className={`${styles.input} !w-[95%] mb-4 md:mb-0 text-black dark:text-[#fff]`}
               required
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}

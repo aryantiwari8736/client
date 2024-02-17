@@ -31,7 +31,7 @@ const CourseCard: FC<Props> = ({ item, isProfile }) => {
           <Ratings rating={item.ratings} />
           <h5
             className={`text-black dark:text-[#fff] ${
-              isProfile && "hidden 800px:inline"
+              isProfile && "hidden md:inline"
             }`}
           >
             {item.purchased} Students
