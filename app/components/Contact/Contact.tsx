@@ -1,8 +1,8 @@
-import React,{FC} from 'react'
+import React from 'react'
 
 type Props = {}
 
-const Page= (props:Props) => {
+const Contact= (props:Props) => {
   return (
     <>
     <section className="relative">
@@ -58,4 +58,4 @@ const Page= (props:Props) => {
   )
 }
 
-export default Page
+export default Contact

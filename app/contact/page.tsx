@@ -2,20 +2,21 @@
 import React, { useState } from "react";
 import Heading from "../utils/Heading";
 import Header from "../components/Header";
-import About from "./About";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact/Contact";
+
 
 type Props = {};
 
 const Page = (props: Props) => {
   const [open, setOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(1);
+  const [activeItem, setActiveItem] = useState(6);
   const [route, setRoute] = useState("Login");
 
   return (
-    <div>
+    <div className="min-h-screen">
       <Heading
-        title="About us - Elearning"
+        title="FAQ - Elearning"
         description="Elearning is a learning management system for helping programmers."
         keywords="programming,mern"
       />
@@ -26,7 +27,8 @@ const Page = (props: Props) => {
         setRoute={setRoute}
         route={route}
       />
-      <About />
+      <br />
+      <Contact/>
       <Footer />
     </div>
   );

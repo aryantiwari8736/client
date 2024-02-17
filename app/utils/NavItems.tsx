@@ -16,23 +16,27 @@ export const navItemsData = [
   },
   {
     name: "About",
-    url: "/aboutus",
+    url: "/about",
   },
   {
     name: "Training",
     url: "/training",
   },
   {
-    name: "About",
-    url: "/about",
+    name: "Corporate",
+    url: "/corporate",
+  },
+  {
+    name: "Products",
+    url: "/product",
   },
   {
     name: "Careers",
-    url: "/careers",
+    url: "/career",
   },
   {
     name: "Contact Us",
-    url: "/contactus",
+    url: "/contact",
   },
 ];
 

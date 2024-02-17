@@ -53,9 +53,9 @@ const Page = (props: Props) => {
             setRoute={setRoute}
             open={open}
             setOpen={setOpen}
-            activeItem={1}
+            activeItem={2}
           />
-          <div className="w-[95%] 800px:w-[85%] m-auto min-h-[70vh]">
+          <div className="w-[95%] md:w-[85%] m-auto min-h-[70vh]">
             <Heading
               title={"All courses - Elearning"}
               description={"Elearning is a programming community."}

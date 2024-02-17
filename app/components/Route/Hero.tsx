@@ -1,10 +1,6 @@
 'use client';
-import Link from "next/link";
-import React, { FC, useState } from "react";
+import React, { FC} from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { BiSearch } from "react-icons/bi";
-import Loader from "../Loader/Loader";
 import { Button } from "@/components/ui/button";
 import CountUp from 'react-countup'
 type Props = {
@@ -12,26 +8,10 @@ type Props = {
 }
 
 const Hero:FC<Props> = ({setOpen}) =>{
-  const [search,setSearch] = useState("");
-  const router = useRouter()
-  const handleSearch = () => {
-    if(search === ""){
-     return
-    }else{
-     router.push(`/courses?title=${search}`);
-    }
-   }
-
-
 
 return (
-
-
-
   <> 
-
 <header>
-  
   <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
    
     <div className="grid grid-cols-1 items-center justify-items-start gap-8 sm:gap-20 lg:grid-cols-2">
@@ -40,10 +20,7 @@ return (
        
         <h1 className="mb-4 text-3xl font-bold md:text-5xl text-[#002A5E] dark:text-white">Crafting Dream Projects, Lets Expand, Innovate, and Thrive Together</h1>
         <p className="mb-6 max-w-lg text-base text-[#636262] ">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus</p>
-        
-      
-              
-        <div className="flex items-center my-4 gap-x-3">
+       <div className="flex items-center my-4 gap-x-3">
         <Button  className="bg-[#002A5E] dark:bg-white">
                     Corportate
                 </Button>
@@ -71,11 +48,7 @@ return (
       <Image src={require("../../../public/assests/laptop.png")} alt="" className= "object-cover w-full h-auto lg:w-auto lg:h-full" />
     </div>
   </div>
-</header>
-    
-    
-    
-    
+</header>  
     </>
 
    
