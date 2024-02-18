@@ -28,7 +28,7 @@ export const navItemsData = [
   },
   {
     name: "Products",
-    url: "/product",
+    url: "/products",
   },
   {
     name: "Careers",
