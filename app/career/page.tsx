@@ -4,6 +4,7 @@ import Heading from "../utils/Heading";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HeroCareer from "../components/Career/HeroCareer";
+import StepsCareer from "../components/Career/StepsCareer";
 
 
 type Props = {};
@@ -29,6 +30,7 @@ const Page = (props: Props) => {
       />
       <br />
       <HeroCareer/>
+      <StepsCareer/>
       <Footer />
     </div>
   );
