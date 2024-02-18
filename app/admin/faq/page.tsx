@@ -5,7 +5,19 @@ import Heading from "@/app/utils/Heading";
 import React from "react";
 import AdminSidebar from "../../components/Admin/sidebar/AdminSidebar";
 import EditFaq from "../../components/Admin/Customization/EditFaq";
-
+import dynamic from "next/dynamic";
+const DynamicAdminSidebar = dynamic(()=> import("../../components/Admin/sidebar/AdminSidebar"),{
+  loading:()=><p>loading....</p>,
+  ssr:false
+})
+const DynamicDashboardHero = dynamic(()=> import("../../components/Admin/DashboardHero"),{
+  loading:()=><p>loading....</p>,
+  ssr:false
+})
+const DynamicEditFaq = dynamic(()=> import("../../components/Admin/Customization/EditFaq"),{
+  loading:()=><p>loading....</p>,
+  ssr:false
+})
 type Props = {};
 
 const page = (props: Props) => {
@@ -19,11 +31,11 @@ const page = (props: Props) => {
         />
         <div className="flex min-h-screen">
           <div className="1500px:w-[16%] w-1/5">
-            <AdminSidebar />
+            <DynamicAdminSidebar />
           </div>
           <div className="w-[85%]">
-            <DashboardHero />
-            <EditFaq />
+            <DynamicDashboardHero />
+            <DynamicEditFaq />
             <br />
           </div>
         </div>

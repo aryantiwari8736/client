@@ -4,9 +4,20 @@ import AdminSidebar from "../../components/Admin/sidebar/AdminSidebar";
 import Heading from '../../../app/utils/Heading';
 import OrdersAnalytics from "../../components/Admin/Analytics/OrdersAnalytics";
 import DashboardHeader from '../../../app/components/Admin/DashboardHeader';
-
+import dynamic from 'next/dynamic';
 type Props = {}
-
+const DynamicAdminSidebar = dynamic(()=> import("../../components/Admin/sidebar/AdminSidebar"),{
+  loading:()=><p>loading....</p>,
+  ssr:false
+})
+const DynamicDashboardHeader = dynamic(()=> import("../../../app/components/Admin/DashboardHeader"),{
+  loading:()=><p>loading....</p>,
+  ssr:false
+})
+const DynamicOrdersAnalytics = dynamic(()=> import("../../components/Admin/Analytics/OrdersAnalytics"),{
+  loading:()=><p>loading....</p>,
+  ssr:false
+})
 const page = (props: Props) => {
   return (
     <div>
@@ -17,11 +28,11 @@ const page = (props: Props) => {
         />
         <div className="flex">
             <div className="1500px:w-[16%] w-1/5">
-                <AdminSidebar />
+                <DynamicAdminSidebar />
             </div>
             <div className="w-[85%]">
-               <DashboardHeader />
-               <OrdersAnalytics />
+               <DynamicDashboardHeader />
+               <DynamicOrdersAnalytics />
             </div>
         </div>
     </div>
