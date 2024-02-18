@@ -24,7 +24,7 @@ export const navItemsData = [
   },
   {
     name: "Corporate",
-    url: "/corporate",
+    url: "/corporat",
   },
   {
     name: "Products",
@@ -74,7 +74,7 @@ const NavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
                 /></SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle className="my-4">Quality Veda</SheetTitle>
+                <SheetTitle className="my-4">SpringBee</SheetTitle>
               </SheetHeader>
               <nav className="flex items-center justify-center flex-col gap-7">
 
