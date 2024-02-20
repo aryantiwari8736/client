@@ -20,7 +20,7 @@ interface SupabaseConfig {
 
 
   
-  export const createSupabaseClient = ({ supabaseUrl, supabaseKey }: SupabaseConfig): SupabaseClient => {
+const createSupabaseClient = ({ supabaseUrl, supabaseKey }: SupabaseConfig): SupabaseClient => {
     return createClient(supabaseUrl, supabaseKey);
   };
 
