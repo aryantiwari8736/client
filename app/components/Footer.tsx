@@ -90,7 +90,7 @@ const Footer = (props: Props) => {
           </span>
           <div className="flex items-center mt-1 space-x-3">
             <a
-              href="/"
+              href="https://twitter.com/springbee_tech"
               className="text-gray-500 dark:text-white  transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -98,7 +98,7 @@ const Footer = (props: Props) => {
               </svg>
             </a>
             <a
-              href="/"
+              href="https://www.linkedin.com/company/springbeelive/"
               className="text-gray-500  dark:text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
               <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
@@ -107,7 +107,7 @@ const Footer = (props: Props) => {
               </svg>
             </a>
             <a
-              href="/"
+              href="https://www.instagram.com/springbee_tech/"
               className="text-gray-500  dark:text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -116,8 +116,7 @@ const Footer = (props: Props) => {
             </a>
           </div>
           <p className="mt-4 text-sm dark:text-white  text-gray-500">
-            Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
-            spare ribs salami.
+          Stay updated and engaged by connecting with us on our social media platforms. Follow us for the latest news, tips, and insights to enhance your digital presence
           </p>
         </div>
       </div>
