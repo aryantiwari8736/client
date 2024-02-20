@@ -28,7 +28,7 @@ type Props = {};
 
 const Page = (props: Props) => {
   const [open, setOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(5);
+  const [activeItem, setActiveItem] = useState(4);
   const [route, setRoute] = useState("Login");
   const router=useRouter();
   const [isLoading,setIsLoading]=useState(false);
@@ -190,9 +190,9 @@ const Page = (props: Props) => {
   
     <div className="">
       <Heading
-        title="FAQ - Elearning"
-        description="Elearning is a learning management system for helping programmers."
-        keywords="programming,mern"
+        title=" Join SpringBee - Apply for a Rewarding Career Opportunity"
+        description="Complete the career form to apply for a position at SpringBee and take the first step towards a fulfilling career in IT consultancy. Tell us about your skills, experience, and aspirations, and let's explore how you can contribute to our dynamic team."
+        keywords=" Career application, job application form, IT consultancy careers, apply for a job, career opportunities, IT professionals, SpringBee team, skills and experience"
       />
       <Header
         open={open}

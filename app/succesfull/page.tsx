@@ -9,15 +9,15 @@ type Props = {};
 
 const Page = (props: Props) => {
   const [open, setOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(4);
+  const [activeItem, setActiveItem] = useState(0);
   const [route, setRoute] = useState("Login");
 
   return (
     <div className="min-h-screen">
       <Heading
-        title="FAQ - Elearning"
-        description="Elearning is a learning management system for helping programmers."
-        keywords="programming,mern"
+        title="Thank You for Your Submission - SpringBee Consultancy"
+        description=" Your form has been successfully submitted! We appreciate your interest in SpringBee's services. Our team will review your submission and get back to you as soon as possible. If you have any urgent inquiries, feel free to contact us directly. Thank you for choosing SpringBee!"
+        keywords=" Form submission, successful submission, SpringBee services, inquiry received, thank you message"
       />
       <Header
         open={open}

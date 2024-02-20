@@ -25,10 +25,10 @@ const page = (props: Props) => {
   return (
     <div>
       <AdminProtected>
-        <Heading
-          title="Elearning - Admin"
-          description="ELearning is a platform for students to learn and get help from teachers"
-          keywords="Programming,MERN,Redux,Machine Learning"
+      <Heading
+          title="SpringBee Admin Panel - Manage Your Digital Strategy with Ease"
+          description="Access the SpringBee Admin Panel to streamline your digital strategy management. Our intuitive interface empowers you to oversee projects, monitor analytics, and collaborate seamlessly with our expert team."
+          keywords="Admin panel, digital strategy management, project oversight, analytics monitoring, collaboration platform, SpringBee tools"
         />
         <div className="flex h-screen">
           <div className="1500px:w-[16%] w-1/5">
