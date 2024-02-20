@@ -19,10 +19,6 @@ export const navItemsData = [
     url: "/about",
   },
   {
-    name: "Training",
-    url: "/training",
-  },
-  {
     name: "Corporate",
     url: "/corporat",
   },
@@ -70,7 +66,7 @@ const NavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
             <SheetTrigger className="mb-4 mr-2"> 
             <HiOutlineMenuAlt3
                   size={25}
-                  className="cursor-pointer  text-black"
+                  className="cursor-pointer dark:text-white  text-black"
                 /></SheetTrigger>
             <SheetContent>
               <SheetHeader>

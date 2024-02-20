@@ -19,9 +19,9 @@ const Page: FC<Props> = (props) => {
   return (
     <div>
       <Heading
-        title="ELearning"
-        description="ELearning is a platform for students to learn and get help from teachers"
-        keywords="Prograaming,MERN,Redux,Machine Learning"
+        title="Welcome to SpringBee - Empowering Your Digital Journey"
+        description="SpringBee is your partner in accelerating business growth through expert IT consultancy services. Explore our tailored solutions, meet our team of professionals, and discover how we can amplify your online potential."
+        keywords=" IT consultancy, technology solutions, digital transformation, strategic planning, innovation, software development, web development, cloud computing, cybersecurity, data analytics, AI & machine learning, IoT, mobile app development, IT infrastructure, enterprise solutions, agile methodologies, customer experience, industry expertise, tailored solutions, expert guidance"
       />
       <Header
         open={open}
