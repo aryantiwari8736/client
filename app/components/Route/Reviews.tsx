@@ -63,15 +63,12 @@ const Reviews = (props: Props) => {
         </div>
         <div className="md:w-[50%] w-full">
           <h3 className={`${styles.title} md:!text-[40px]`}>
-            Our Students Are <span className="text-gradient">Our Strength</span>{" "}
-            <br /> See What They Say About Us
+          Discover Our Strength Through  <span className="text-gradient"></span>{" "}
+            <br />Client Testimonials...
           </h3>
           <br />
           <p className={styles.label}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque unde
-            voluptatum dignissimos, nulla perferendis dolorem voluptate nemo
-            possimus magni deleniti natus accusamus officiis quasi nihil
-            commodi, praesentium quidem, quis doloribus?
+          Explore firsthand accounts of success and satisfaction from our valued clients. Gain insights into the impact of our services on businesses like yours. Let their experiences guide you in choosing the right partner for your digital journey
           </p>
         </div>
         <br />

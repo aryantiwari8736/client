@@ -13,7 +13,7 @@ const CorporateHero = (props: Props) => {
 		    <div className="mx-auto mb-8 w-full max-w-3xl text-center md:mb-12 lg:mb-16">
 		    
 		      <h1 className="mb-4 text-4xl font-bold md:text-6xl"> We deliver the Application you have ever think about. </h1>
-		      <p className="mx-auto mb-6 max-w-lg text-base text-[#636262] md:mb-10 lg:mb-12"> Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus </p>
+		      <p className="mx-auto mb-6 max-w-lg text-base text-[#636262] md:mb-10 lg:mb-12"> Transforming your ideas into reality, our custom applications redefine possibility. Experience seamless integration and functionality tailored precisely to your needs </p>
 		  
 		      <div className="flex items-center justify-center">
 		        <a href="#" className="mr-5 flex items-center bg-[#276ef1] px-8 py-4 font-semibold text-white transition [box-shadow:rgb(171,_196,245)-8px_8px] hover:[box-shadow:rgb(171,_196,_245)_0px_0px] md:mr-6 lg:mr-8">

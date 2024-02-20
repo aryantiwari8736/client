@@ -16,9 +16,9 @@ const Courses = (props: Props) => {
     <div>
       <div className={`w-[90%] md:w-[80%] m-auto`}>
         <h1 className="text-center font-Poppins text-[25px] leading-[35px] sm:text-3xl lg:text-4xl dark:text-white md:!leading-[60px] text-[#000] font-[700] tracking-tight">
-          Expand Your Career <span className="text-gradient">Opportunity</span>{" "}
+        Optimize Your Business  <span className="text-gradient">Growth</span>{" "}
           <br />
-          Opportunity With Our Training Program
+           with Tailored Digital Strategies...
         </h1>
         <br />
         <br />
