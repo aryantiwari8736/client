@@ -3,11 +3,13 @@ import React, { FC } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import CountUp from "react-countup";
+import { useRouter } from "next/navigation";
 type Props = {
   setOpen: (open: boolean) => void;
 };
 
 const Hero: FC<Props> = ({ setOpen }) => {
+  const router =useRouter();
   return (
     <>
       <header>
@@ -22,9 +24,10 @@ const Hero: FC<Props> = ({ setOpen }) => {
               Unlock boundless growth potential by partnering with us to elevate your business to new heights and experience exponential business growth.
               </p>
               <div className="flex items-center my-4 gap-x-3">
-                <Button className="bg-[#002A5E] dark:bg-white">Join Us</Button>
+                <Button onClick={() => router.push('/career')} className="bg-[#002A5E] dark:bg-white">Join Us</Button>
                 <Button
-                  onClick={() => setOpen(true)}
+                onClick={() => router.push('/corporat')}
+                  
                   className="dark:bg-white bg-[#002A5E]"
                 >
                   Book a Consultation

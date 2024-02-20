@@ -5,7 +5,7 @@ type Props = {}
 const StepsCareer = (props: Props) => {
   return (
    
-          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div className="px-4 py-16 mx-auto dark:bg-hsl-custom sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
               
               <h2 className="max-w-lg mb-6  dark:text-white  font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
@@ -37,14 +37,13 @@ const StepsCareer = (props: Props) => {
                 to start your career with SpringBee
               </h2>
               <p className="text-base  dark:text-white  text-gray-700 md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque rem aperiam, eaque ipsa quae.
+              Ready to launch your career journey with SpringBee? Follow these straightforward steps to kickstart your adventure with us!
               </p>
             </div>
             <div className="grid gap-10 lg:grid-cols-4 sm:grid-cols-2">
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <p className="text-2xl font-bold">Step 1</p>
+                  <p className="text-2xl font-bold">Explore</p>
                   <svg
                     className="w-6 text-gray-700  dark:text-white  transform rotate-90 sm:rotate-0"
                     stroke="currentColor"
@@ -69,13 +68,13 @@ const StepsCareer = (props: Props) => {
                   </svg>
                 </div>
                 <p className="text-gray-600  dark:text-gray-300">
-                  If one examines precultural libertarianism, one is faced with a
-                  choice: either accept rationalism or conclude that context.
+                Explore our diverse range of job openings and find the perfect match for your skills and aspirations.
+
                 </p>
               </div>
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <p className="text-2xl font-bold">Step 2</p>
+                  <p className="text-2xl font-bold">Apply</p>
                   <svg
                     className="w-6 text-gray-700  dark:text-white transform rotate-90 sm:rotate-0"
                     stroke="currentColor"
@@ -100,13 +99,13 @@ const StepsCareer = (props: Props) => {
                   </svg>
                 </div>
                 <p className="text-gray-600  dark:text-gray-300">
-                  That is the true genius of America - a faith in simple dreams, an
-                  insistence on small miracles.
+                Take the plunge and apply for your desired position using our intuitive online application system.
+
                 </p>
               </div>
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <p className="text-2xl font-bold">Step 3</p>
+                  <p className="text-2xl font-bold">Train</p>
                   <svg
                     className="w-6 text-gray-700  dark:text-white transform rotate-90 sm:rotate-0"
                     stroke="currentColor"
@@ -131,13 +130,13 @@ const StepsCareer = (props: Props) => {
                   </svg>
                 </div>
                 <p className="text-gray-600  dark:text-gray-300 ">
-                  Those options are already baked in with this model shoot me an email
-                  clear blue water but we need distributors.
+                Upon selection, dive into our comprehensive training program designed to equip you with the knowledge and skills needed to excel in your role.
+
                 </p>
               </div>
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <p className="text-2xl font-bold">Success</p>
+                  <p className="text-2xl font-bold">Join</p>
                   <svg
                     className="w-8 dark:text-white text-gray-600"
                     stroke="currentColor"
@@ -154,8 +153,7 @@ const StepsCareer = (props: Props) => {
                   </svg>
                 </div>
                 <p className="text-gray-600  dark:text-gray-300 ">
-                  Lookout flogging bilge rat main sheet bilge water nipper fluke to go
-                  on account heave down clap of thunder.
+                Congratulations! Upon successful completion of training, you{`'`}ll officially join the SpringBee team and begin making a meaningful impact.
                 </p>
               </div>
             </div>

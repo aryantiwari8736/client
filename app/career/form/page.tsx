@@ -1,17 +1,17 @@
 "use client";
 import React, { useState } from "react";
-import Heading from "../../../utils/Heading";
-import Header from "../../../components/Header";
-import Footer from "../../../components/Footer";
+import Heading from "../../utils/Heading";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import { createClient,SupabaseClient } from '@supabase/supabase-js';
 import { useRouter } from "next/navigation";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Button } from "@/components/ui/button";
-import Input from "../../../../components/input/index";
-import InputRadio from "../../../../components/inputRadio/index";
-import InputSelect from "../../../../components/inputSelect/index";
-import InputFile from "../../../../components/inputFile/index";
+import Input from "../../../components/input/index";
+import InputRadio from "../../../components/inputRadio/index";
+import InputSelect from "../../../components/inputSelect/index";
+import InputFile from "../../../components/inputFile/index";
 import Loader from "@/app/components/Loader/Loader";
 interface SupabaseConfig {
     supabaseUrl: string;
@@ -204,26 +204,15 @@ const Page = (props: Props) => {
       <br />
 
     
-    <div className="isolate bg-white dark:bg-black px-6 py-24 sm:py-32 lg:px-8">
-      <div
-        className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
-        aria-hidden="true"
-      >
-        <div
-          className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
-          style={{
-            clipPath:
-              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-          }}
-        />
-      </div>
+    <div className="isolate bg-white dark:bg-hsl-custom px-6 py-12 sm:py-16 lg:px-8">
+      
       <div className="mx-auto max-w-2xl dark:text-white text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white  sm:text-4xl">Registration Form</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white  sm:text-4xl">Apply Now </h2>
         <p className="mt-2 text-lg leading-8 dark:text-white  text-gray-600">
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
+        Take the next step in advancing your career by applying now. Join our dynamic team and be part of our mission to drive digital innovation forward.
         </p>
       </div>
-      <form onSubmit={formik.handleSubmit}  className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form onSubmit={formik.handleSubmit}  className="mx-auto mt-8 max-w-xl sm:mt-6">
         <div className="grid  dark:text-white grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         <Input value="name" label="Name" placeHolder="John Doe" formikTouched={formik.touched.name} formikError={formik.errors.name} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.name} type="text" />
 

@@ -15,7 +15,7 @@ const Page = (props: Props) => {
   const [route, setRoute] = useState("Login");
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen dark:bg-hsl-custom">
       <Heading
         title="FAQ - Elearning"
         description="Elearning is a learning management system for helping programmers."
@@ -29,8 +29,9 @@ const Page = (props: Props) => {
         route={route}
       />
       <br />
-      <HeroCareer/>
-      <StepsCareer/>
+      <div className="my-2"><HeroCareer/>
+      <StepsCareer/></div>
+      
       <Footer />
     </div>
   );
