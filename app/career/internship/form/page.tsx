@@ -102,7 +102,7 @@ const Page = (props: Props) => {
           console.error('Error inserting data:', error);
         } else {
           console.log('Data inserted successfully:', data);
-          
+          setIsLoading(false)
           router.push('/succesfull')
         }
       } catch (error) {
@@ -204,7 +204,7 @@ const Page = (props: Props) => {
       <br />
 
     
-    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div className="isolate bg-white dark:bg-black px-6 py-24 sm:py-32 lg:px-8">
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
@@ -217,14 +217,14 @@ const Page = (props: Props) => {
           }}
         />
       </div>
-      <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Registration Form</h2>
-        <p className="mt-2 text-lg leading-8 text-gray-600">
+      <div className="mx-auto max-w-2xl dark:text-white text-center">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white  sm:text-4xl">Registration Form</h2>
+        <p className="mt-2 text-lg leading-8 dark:text-white  text-gray-600">
           Aute magna irure deserunt veniam aliqua magna enim voluptate.
         </p>
       </div>
       <form onSubmit={formik.handleSubmit}  className="mx-auto mt-16 max-w-xl sm:mt-20">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+        <div className="grid  dark:text-white grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         <Input value="name" label="Name" placeHolder="John Doe" formikTouched={formik.touched.name} formikError={formik.errors.name} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.name} type="text" />
 
         <Input value="email" label="Email" placeHolder="doe@gmail.com" formikTouched={formik.touched.email} formikError={formik.errors.email} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.email} type="text" />
