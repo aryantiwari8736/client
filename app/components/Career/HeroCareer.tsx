@@ -6,7 +6,7 @@ type Props = {}
 const HeroCareer = (props: Props) => {
   return (
   
-        <div className="bg-white">
+        <div className="bg-white dark:bg-black">
           
     
           <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -24,7 +24,7 @@ const HeroCareer = (props: Props) => {
             </div>
             <div className="mx-auto max-w-2xl py-6 sm:py-2 lg:py-4">
               <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                <div className="relative dark:text-white rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                   Announcing our new recruitment.{' '}
                   <Link href="#careerpost" className="font-semibold text-indigo-600">
                     <span className="absolute inset-0" aria-hidden="true" />
@@ -33,10 +33,10 @@ const HeroCareer = (props: Props) => {
                 </div>
               </div>
               <div className="text-center">
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                <h1 className="text-4xl dark:text-white font-bold tracking-tight text-gray-900 sm:text-6xl">
                   Start Your Career With SpringBee
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-gray-600">
+                <p className="mt-6  dark:text-white text-lg leading-8 text-gray-600">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
                   fugiat veniam occaecat fugiat aliqua.
                 </p>
