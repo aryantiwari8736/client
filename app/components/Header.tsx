@@ -26,7 +26,7 @@ type Props = {
 
 const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
   const [active, setActive] = useState(false);
-  const [openSidebar, setOpenSidebar] = useState(false);
+ 
   const {data:userData,isLoading,refetch} = useLoadUserQuery(undefined,{});
   const { data } = useSession();
   const [socialAuth, { isSuccess, error }] = useSocialAuthMutation();
@@ -68,13 +68,6 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
     });
   }
 
-  const handleClose = (e: any) => {
-    if (e.target.id === "screen") {
-      {
-        setOpenSidebar(false);
-      }
-    }
-  };
 
   return (
    <>
@@ -82,7 +75,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
     isLoading ? (
       <Loader />
     ) : (
-      <div className="w-full relative">
+      <div className="w-full relative ">
       <div
         className={`${
           active
@@ -95,9 +88,10 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
             <div>
               <Link
                 href={"/"}
-                className={`text-[25px] font-Poppins font-[500] text-black dark:text-white`}
+                className={`text-[25px] flex gap-2 font-Poppins font-[500] text-black dark:text-white`}
               >
-                SpringBee
+                 <Image width={50} height={50} alt="springbee -consultancy service logo" className="mb-1" src="/assests/springbeeIcon.png" />
+               <div className="mb-0"></div> 
               </Link>
             </div>
             <div className="flex items-center">

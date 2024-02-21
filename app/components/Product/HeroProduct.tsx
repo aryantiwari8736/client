@@ -32,7 +32,7 @@ const HeroProduct = (props: Props) => {
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                   <Link
-                    href="#contacts"
+                    href="#contact"
                     className="rounded-md bg-[#002A5E] dark:text-gray-900 dark:bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-100 shadow-sm hover:bg-gray-100 hover:text-black dark:hover:bg-gray-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
                     Get started
