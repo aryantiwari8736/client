@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import Heading from "../utils/Heading";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import NewsLetterProduct from "../components/Product/NewsLetterProduct";
+import NewsLetterProduct from "../components/Product/ProductNewsLetter";
 import HeroProduct from "../components/Product/HeroProduct";
+import ProductContact from "../components/Product/ProductContact";
 
 
 type Props = {};
@@ -30,6 +31,9 @@ const Page = (props: Props) => {
       />
       <br />
       <HeroProduct/>
+      
+      
+      <ProductContact/>
       <NewsLetterProduct/>
       <Footer />
     </div>

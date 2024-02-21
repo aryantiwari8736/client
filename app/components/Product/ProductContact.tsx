@@ -23,7 +23,7 @@ const createSupabaseClient = ({
 }: SupabaseConfig): SupabaseClient => {
   return createClient(supabaseUrl, supabaseKey);
 };
-const CorporateContact = (props: Props) => {
+const ProductContact = (props: Props) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const router = useRouter();
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -52,7 +52,7 @@ const CorporateContact = (props: Props) => {
       console.log(newId, typeof newId);
       try {
         console.log(values);
-        const { data, error } = await supabase.from("corporateform").insert([
+        const { data, error } = await supabase.from("productform").insert([
           {
             id: newId,
             name: values.name,
@@ -161,8 +161,7 @@ const CorporateContact = (props: Props) => {
                     placeholder=""
                     className="h-auto min-h-[186px] w-full overflow-auto bg-white px-3 py-2 text-sm text-[#333333]"
                   />
-                    
-                  
+                   
                 </div>
                 <button
                   type="submit"
@@ -198,4 +197,4 @@ const CorporateContact = (props: Props) => {
   );
 };
 
-export default CorporateContact;
+export default ProductContact;

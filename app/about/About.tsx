@@ -21,10 +21,10 @@ const About = () => {
 </p>
         <Link href="#section" className="w-36 rounded-md bg-[#002A5E] px-6 py-3 text-center font-semibold text-white">Our Mission</Link>
       
-        <div className="my-8 h-px w-full bg-black"></div>
+        <div className="my-8  dark:bg-gray-800 dark:text-white h-px w-full bg-black"></div>
       
         <div className="grid gap-8 md:grid-cols-2 md:gap-4">
-          <div className="flex flex-col gap-4 rounded-md border border-solid bg-[#f2f2f7] p-6 md:p-4">
+          <div className="flex dark:bg-gray-800 dark:text-white flex-col gap-4 rounded-md border border-solid bg-[#f2f2f7] p-6 md:p-4">
             <p className="text-sm">Working with SpringBee was a game-changer for our business. Their team of experts truly understands the digital landscape and provided tailored strategies that aligned perfectly with our goals. From enhancing our online presence to implementing effective content strategies, they exceeded our expectations at every turn. Thanks to SpringBee, we have seen significant growth and established long-lasting partnerships. </p>
             <div className="flex items-center gap-2 sm:gap-x-4">
               <div className="flex items-center gap-x-2">
@@ -55,7 +55,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-4 rounded-md border border-solid bg-[#f2f2f7] p-6 md:p-4">
+          <div className="flex  dark:bg-gray-800 dark:text-white flex-col gap-4 rounded-md border border-solid bg-[#f2f2f7] p-6 md:p-4">
             <p className="text-sm">I can not say enough good things about SpringBee! Their professionalism, expertise, and dedication to our success were evident from day one. They took the time to understand our unique business needs and crafted personalized strategies that delivered tangible results. Their guidance not only helped us navigate the complexities of digital marketing but also inspired confidence in our team.</p>
             <div className="flex items-center gap-2 sm:gap-x-4">
               <div className="flex items-center gap-x-2">
