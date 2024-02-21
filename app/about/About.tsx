@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -88,7 +89,9 @@ const About = () => {
         </div>
       </div>
       
-      <div className="w-full rounded-md bg-[#f2f2f7] max-[991px]:h-[475px] lg:w-2/5"></div>
+      <div className="w-full rounded-md  max-[991px]:h-[475px] lg:w-2/5 hidden   lg:inline-block  ">
+        <Image className="rounded-md" src={require("../../public/assests/11b9e87e-2941-43c0-ad64-6f6881de366a.jpg")}alt="anput-image" />
+      </div>
     </div>
   </div>
 </section>
