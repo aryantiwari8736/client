@@ -160,9 +160,8 @@ const ProductContact = (props: Props) => {
                   value={formik.values.message}
                     placeholder=""
                     className="h-auto min-h-[186px] w-full overflow-auto bg-white px-3 py-2 text-sm text-[#333333]"
-                  >
-                    {" "}
-                  </textarea>
+                  />
+                   
                 </div>
                 <button
                   type="submit"
