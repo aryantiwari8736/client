@@ -12,15 +12,15 @@ type Props = {};
 
 const Page = (props: Props) => {
   const [open, setOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(3);
+  const [activeItem, setActiveItem] = useState(2);
   const [route, setRoute] = useState("Login");
 
   return (
     <div className="min-h-screen">
       <Heading
-        title="FAQ - Elearning"
-        description="Elearning is a learning management system for helping programmers."
-        keywords="programming,mern"
+        title="SpringBee Corporate Solutions - Elevate Your Business with Expert Consultancy"
+        description=" Explore SpringBee's comprehensive range of corporate consultancy solutions designed to optimize business performance and drive growth. From digital strategy development to implementation and ongoing support, our team of experts is committed to partnering with your organization for success."
+        keywords="Corporate consultancy, business optimization, growth strategy, digital transformation, expert guidance, business performance, SpringBee solutions, corporate partnership"
       />
       <Header
         open={open}

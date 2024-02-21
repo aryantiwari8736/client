@@ -25,9 +25,9 @@ const page = ({params}:any) => {
   return (
     <div>
         <Heading
-         title="Elearning - Admin"
-         description="ELearning is a platform for students to learn and get help from teachers"
-         keywords="Prograaming,MERN,Redux,Machine Learning"
+          title="SpringBee Admin Panel - Manage Your Digital Strategy with Ease"
+          description="Access the SpringBee Admin Panel to streamline your digital strategy management. Our intuitive interface empowers you to oversee projects, monitor analytics, and collaborate seamlessly with our expert team."
+          keywords="Admin panel, digital strategy management, project oversight, analytics monitoring, collaboration platform, SpringBee tools"
         />
         <div className="flex">
             <div className="1500px:w-[16%] w-1/5">

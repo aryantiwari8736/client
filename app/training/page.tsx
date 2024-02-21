@@ -57,10 +57,10 @@ const Page = (props: Props) => {
           />
           <div className="w-[95%] md:w-[85%] m-auto min-h-[70vh]">
             <Heading
-              title={"All courses - Elearning"}
-              description={"Elearning is a programming community."}
+              title={"Elevate Your Skills with SpringBee Training Programs"}
+              description={" Explore SpringBee's comprehensive training programs designed to enhance your skills and expertise in IT consultancy. From beginner to advanced levels, our courses cover a wide range of topics including MERN stack development, digital strategy implementation, and project management."}
               keywords={
-                "programming community, coding skills, expert insights, collaboration, growth"
+                " Training programs, IT consultancy, skills enhancement, MERN stack development, digital strategy, project management, SpringBee courses"
               }
             />
             <br />
