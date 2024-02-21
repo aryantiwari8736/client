@@ -58,6 +58,7 @@ const NavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
                 {i.name}
               </span>
             </Link>
+            
           ))}
       </div>
       {isMobile && (

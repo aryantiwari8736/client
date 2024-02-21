@@ -2,12 +2,12 @@ import React from 'react'
 
 type Props = {}
 
-const CorporateContact = (props: Props) => {
+const ProductContact = (props: Props) => {
   return (
     <>
     
 
-<section id='contact'>
+<section id='contacts'>
  
   <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
  
@@ -48,4 +48,4 @@ const CorporateContact = (props: Props) => {
   )
 }
 
-export default CorporateContact
+export default ProductContact
