@@ -45,7 +45,7 @@ const Footer = (props: Props) => {
               title="Our phone"
               className="transition-colors  dark:text-white duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-            +918299550885
+            +918218321081
             </a>
           </div>
           <div className="flex">

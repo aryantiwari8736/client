@@ -129,7 +129,7 @@ const Contact = (props: Props) => {
                   </svg>
 
                   <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">
-                    +91-8299550885
+                    +91-8218321081
                   </span>
                 </p>
 
