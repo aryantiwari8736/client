@@ -1,5 +1,6 @@
 "use client";
 import "./globals.css";
+import {NextUIProvider} from '@nextui-org/react'
 import { Poppins } from "next/font/google";
 import { Josefin_Sans } from "next/font/google";
 import { ThemeProvider } from "./utils/theme-provider";
@@ -39,7 +40,9 @@ export default function RootLayout({
           <SessionProvider>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <Custom>
-                <div>{children}</div>
+                <NextUIProvider>
+                <>{children}</>
+                </NextUIProvider>
               </Custom>
               <Toaster position="top-center" reverseOrder={false} />
             </ThemeProvider>

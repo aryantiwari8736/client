@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Heading from "../../utils/Heading";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import {CircularProgress,Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure} from "@nextui-org/react";
 import { createClient,SupabaseClient } from '@supabase/supabase-js';
 import { useRouter } from "next/navigation";
 import { useFormik } from 'formik';
@@ -27,6 +28,7 @@ const createSupabaseClient = ({ supabaseUrl, supabaseKey }: SupabaseConfig): Sup
 type Props = {};
 
 const Page = (props: Props) => {
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
   const [open, setOpen] = useState(false);
   const [activeItem, setActiveItem] = useState(4);
   const [route, setRoute] = useState("Login");
@@ -75,7 +77,7 @@ const Page = (props: Props) => {
     },
     validationSchema: validationSchema,
     onSubmit: async (values) => {
-      setIsLoading(true)
+      onOpen();
       try {
         console.log(values)
         const { data, error } = await supabase
@@ -102,7 +104,7 @@ const Page = (props: Props) => {
           console.error('Error inserting data:', error);
         } else {
           console.log('Data inserted successfully:', data);
-          setIsLoading(false)
+          setFormSubmitted(true)
           router.push('/succesfull')
         }
       } catch (error) {
@@ -134,18 +136,19 @@ const Page = (props: Props) => {
   
   const branchOptions = [
     {label: 'Select Branch', value: 'select'},
-    { label: 'BCA/MCA', value: 'bca_mca' },
-    { label: 'CSE', value: 'cse' },
-    { label: 'CS', value: 'cs' },
-    { label: 'IT', value: 'it' },
-    { label: 'CSIT', value: 'csit' },
-    { label: 'CSAI', value: 'csai' },
-    { label: 'CSE (AI/ML)', value: 'cseaiml' },
-    { label: 'ECE', value: 'ece' },
-    { label: 'ME', value: 'me' },
-    { label: 'EEE', value: 'eee' },
+
+    
+    { label: 'Computer Science and Engineering (CSE)', value: 'cse' },
+    { label: 'Information Technology (IT)', value: 'it' },
+    { label: 'Computer Engineering (CE)', value: 'ce' },
+    { label: 'Electronics and Communication Engineering with specialization in Computer Science', value: 'ece_cs' },
+    { label: ' Electronics and Computer Engineering', value: 'ece' },
+    { label: ' Electrical and Computer Engineering', value: 'eee' },
+    { label: 'Mechanical Engineering', value: 'me' },
+    { label: 'Other', value: 'other' },
   ];
   const stateOptions = [
+    { label: "Select Option", value: "select" },
     { label: "Andhra Pradesh", value: "AP" },
     { label: "Arunachal Pradesh", value: "AR" },
     // Add more states in the same format
@@ -186,7 +189,7 @@ const Page = (props: Props) => {
   
   return (
     <>
-    {isLoading ? <Loader /> :
+    
   
     <div className="">
       <Heading
@@ -264,6 +267,29 @@ const Page = (props: Props) => {
           >
             Submit
           </Button>
+          
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} isDismissable={false} className="mx-auto">
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">Registration Status</ModalHeader>
+              <ModalBody>
+                {!formSubmitted?<CircularProgress size="lg" aria-label="Loading..." label="Submitting Form"/>:<><CircularProgress
+      label="SuccesFully Submitted"
+      size="lg"
+      value={100}
+      color="success"
+      
+      showValueLabel={true}
+    /></>
+    }
+              </ModalBody>
+              
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+
         </div>
       </form>
     </div>
@@ -271,7 +297,7 @@ const Page = (props: Props) => {
 
       <Footer />
     </div>
-}
+
 </>
   );
 };

@@ -33,7 +33,7 @@ const HeroCareer = (props: Props) => {
                     href="career/form"
                     className="rounded-md bg-[#002A5E] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#102641] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#102641]"
                   >
-                    Get started
+                    Apply Now
                   </Link>
                  
                 </div>
