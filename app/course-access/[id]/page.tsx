@@ -1,10 +1,13 @@
 'use client'
-import CourseContent from "@/app/components/Course/CourseContent";
 import Loader from "@/app/components/Loader/Loader";
 import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
 import { redirect } from "next/navigation";
 import React, { useEffect } from "react";
-
+import dynamic from "next/dynamic";
+const DynamicCourseContent = dynamic(()=> import("../../components/Course/CourseContent"),{
+  loading:()=><p>loading....</p>,
+  ssr:false
+})
 type Props = {
     params:any;
 }
@@ -34,7 +37,7 @@ const Page = ({params}: Props) => {
         <Loader />
     ) : (
         <div>
-          <CourseContent id={id} user={data.user} />
+          <DynamicCourseContent id={id} user={data.user} />
         </div>
     )
    }

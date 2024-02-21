@@ -45,7 +45,7 @@ const Footer = (props: Props) => {
           </div>
         </div>
         <div className="space-y-2 text-sm">
-          <p className="text-base  dark:text-white font-bold tracking-wide text-gray-900">
+          <p className="text-base  dark:text-white font-bold tracking-wide text-gray-900 mb-9">
             Contacts
           </p>
           <div className="flex">

@@ -32,7 +32,6 @@ const Page: FC<Props> = (props) => {
       />
       <Hero setOpen={setOpen}/>
       <Howwework/>
-      <Courses />
       <Reviews />
       <FAQ />
       <Footer />

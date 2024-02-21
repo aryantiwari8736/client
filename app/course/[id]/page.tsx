@@ -1,12 +1,15 @@
 'use client'
 import React from "react";
-import CourseDetailsPage from "../../components/Course/CourseDetailsPage";
-
+import dynamic from "next/dynamic";
+const DynamicCourseDetailsPage = dynamic(()=> import("../../components/Course/CourseDetailsPage"),{
+  loading:()=><p>loading....</p>,
+  ssr:false
+})
 
 const Page = ({params}:any) => {
     return (
         <div>
-            <CourseDetailsPage id={params.id} />
+            <DynamicCourseDetailsPage id={params.id} />
         </div>
     )
 }
