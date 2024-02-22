@@ -103,7 +103,7 @@ const About = () => {
     <h2 className="mb-8 text-3xl font-bold md:text-5xl lg:mb-14">Know Springee</h2>
     <p className="mb-8 max-w-lg text-sm text-[#808080] sm:text-base lg:mb-24">Welcome to SpringBee, your premier destination for unlocking the full potential of your online presence. Our expert consultancy services specialize in accelerating businesses through tailored digital strategies.</p>
     <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
-      <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/64b7a30c42421ae3cbe5abb9_about%20image.svg" alt="" className="inline-block h-full w-full rounded-2xl object-cover" />
+      <Image src={require("../../public/assests/consulting-firm-project-management.jpg")} alt="" className="inline-block h-full w-full rounded-2xl object-cover" />
       <div className="flex flex-col gap-5 rounded-2xl border border-solid border-black p-10 sm:p-20">
         <h2 className="text-3xl font-bold md:text-5xl">Our Mission</h2>
         <p className="text-sm text-[#808080] sm:text-base"> Acknowledging the acclaimed potential of the digital sphere, SpringBee envisions its mission in empowering emerging startups, gradually driving the nation to a digitalized era where accessibility and excellence can prevail. The team aims at catalysing a reformation for businesses to thrive in while optimizing costs and offering innovative solutions tailored to the unique needs of the digital landscape.
