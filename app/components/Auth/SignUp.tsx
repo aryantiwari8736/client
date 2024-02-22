@@ -80,7 +80,8 @@ const Signup: FC<Props> = ({ setRoute }) => {
           )}
         </div>
         <label className={`${styles.label}`} htmlFor="email">
-          Enter your Email
+        Enter your Email ID
+
         </label>
         <input
           type="email"
@@ -98,7 +99,7 @@ const Signup: FC<Props> = ({ setRoute }) => {
         )}
         <div className="w-full mt-5 relative mb-1">
           <label className={`${styles.label}`} htmlFor="email">
-            Enter your password
+          Enter your Password
           </label>
           <input
             type={!show ? "password" : "text"}

@@ -31,7 +31,8 @@ const Howwework = (props: Props) => {
               </div>
               <p className="mb-2 text-xl font-semibold">Connect</p>
               <p className="text-sm text-[#636262]">
-              Arrange a consultation for your startup by scheduling a meeting with us.
+              Schedule a Personalized Consultation tailored to your Needs
+
               </p>
               <img
                 src="https://assets.website-files.com/63904f663019b0d8edf8d57c/639833af1925275b6f0b43e1_Vector%2032.svg"
@@ -46,7 +47,7 @@ const Howwework = (props: Props) => {
               </div>
               <p className="mb-2 text-xl font-semibold">Create</p>
               <p className="text-sm text-[#636262]">
-              Crafting a technical solution with the expertise of our team
+              Design Customized Technical Solutions aligning with your Objectives
               </p>
               <img
                 src="https://assets.website-files.com/63904f663019b0d8edf8d57c/639834731925279c5e0b4ee5_Vector%2033.svg"
@@ -61,7 +62,7 @@ const Howwework = (props: Props) => {
               </div>
               <p className="mb-2 text-xl font-semibold">Configure</p>
               <p className="text-sm text-[#636262]">
-              Customize an optimal solution for your startup with our innovative team
+              Individualize an Ideal Innovative Solution for your Startup
               </p>
             </div>
           </div>

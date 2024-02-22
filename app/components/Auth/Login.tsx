@@ -58,7 +58,8 @@ const Login: FC<Props> = ({ setRoute, setOpen,refetch }) => {
       <h1 className={`${styles.title}`}>Login with SpringBee</h1>
       <form onSubmit={handleSubmit}>
         <label className={`${styles.label}`} htmlFor="email">
-          Enter your Email
+        Enter your Email ID
+
         </label>
         <input
           type="email"
@@ -76,7 +77,7 @@ const Login: FC<Props> = ({ setRoute, setOpen,refetch }) => {
         )}
         <div className="w-full mt-5 relative mb-1">
           <label className={`${styles.label}`} htmlFor="email">
-            Enter your password
+          Enter your Password
           </label>
           <input
             type={!show ? "password" : "text"}
@@ -120,7 +121,7 @@ const Login: FC<Props> = ({ setRoute, setOpen,refetch }) => {
           <AiFillGithub size={30} className="cursor-pointer ml-2" onClick={() => signIn("github")} />
         </div>
         <h5 className="text-center pt-4 font-Poppins text-[14px]">
-          Not have any account?{" "}
+        Don{"'"}t have an account?{" "}
           <span
             className="text-[#2190ff] pl-1 cursor-pointer"
             onClick={() => setRoute("Sign-Up")}

@@ -16,7 +16,7 @@ const About = () => {
   
       <div className="flex flex-col gap-8 lg:w-3/5">
         <h2 className="mb-8 text-3xl font-bold md:text-5xl">About us</h2>
-        <p className="text-sm sm:text-base">Established to amplify online potential, SpringBee observes its evolution as an organization offering premium consultancy services focused on accelerating businesses, recognizing the individuality in the needs of unparalleled business ventures.Encompassing a team of professionally dedicated experts, the body emphasizes on integrating digital strategies for development, deliberating the enhancement of the pre-existing digital presence of businesses.Reviewing strategic planning and content creation, followed by implementation, the team envisions long-lasting partnerships along the course of guidance, expertise, and encouragement in business growth.
+        <p className="text-sm sm:text-base">Established to amplify online potential, SpringBee observes its evolution as an organization offering premium consultancy services focused on accelerating businesses, recognizing the individuality in the needs of unparalleled business ventures. Encompassing a team of professionally dedicated experts, the body emphasizes on integrating digital strategies for development, deliberating the enhancement of the pre-existing digital presence of businesses. Reviewing strategic planning and content creation, followed by implementation, the team envisions long-lasting partnerships along the course of guidance, expertise, and encouragement in business growth.
 
 </p>
         <Link href="#section" className="w-36 rounded-md bg-[#002A5E] px-6 py-3 text-center font-semibold text-white">Our Mission</Link>
@@ -100,7 +100,7 @@ const About = () => {
 
   <div className="mx-auto w-full max-w-7xl px-5 py-4 md:px-10 md:py-6 lg:py-12">
    
-    <h2 className="mb-8 text-3xl font-bold md:text-5xl lg:mb-14">Know Springee</h2>
+    <h2 className="mb-8 text-3xl font-bold md:text-5xl lg:mb-14">Know SpringBee</h2>
     <p className="mb-8 max-w-lg text-sm text-[#808080] sm:text-base lg:mb-24">Welcome to SpringBee, your premier destination for unlocking the full potential of your online presence. Our expert consultancy services specialize in accelerating businesses through tailored digital strategies.</p>
     <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
       <Image src={require("../../public/assests/consulting-firm-project-management.jpg")} alt="" className="inline-block h-full w-full rounded-2xl object-cover" />

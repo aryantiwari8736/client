@@ -23,13 +23,13 @@ const Footer = (props: Props) => {
           </a>
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm dark:text-white  text-gray-800">
-              Welcome to Springbee, your trusted ally in maximizing your online
-              potential! At Springbee, we are driven by a passion for propelling
+              Welcome to SpringBee, your trusted ally in maximizing your online
+              potential! At SpringBee, we are driven by a passion for propelling
               businesses to success through our premium consultancy services.
               
             </p>
             <p className="mt-4  dark:text-white text-sm text-gray-800">
-            Here at Springbee, we recognize the individuality of every business venture. That is why we take a tailored approach to every project, immersing ourselves in your goals from day one.
+            Here at SpringBee, we recognize the individuality of every business venture. That is why we take a tailored approach to every project, immersing ourselves in your goals from day one.
             </p>
           </div>
         </div>
