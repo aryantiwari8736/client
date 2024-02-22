@@ -28,7 +28,7 @@ const HeroProduct = (props: Props) => {
                   Start using our products today.
                 </h2>
                 <p className="mt-6 text-lg leading-8 dark:text-gray-300">
-                  Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.
+                Experience a productivity surge with our cutting-edge solutions. Elevate your efficiency and effectiveness by integrating our products into your workflow.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                   <Link
