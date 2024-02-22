@@ -62,9 +62,9 @@ const SideBarProfile: FC<Props> = ({
         onClick={() => setActive(3)}
       >
         <SiCoursera size={20} className="dark:text-white text-black"  />
-        <h5 className="pl-2 md:block hidden font-Poppins dark:text-white text-black">
+        {/* <h5 className="pl-2 md:block hidden font-Poppins dark:text-white text-black">
           Enrolled Courses
-        </h5>
+        </h5> */}
       </div>
       {user.role === "admin" && (
         <Link
