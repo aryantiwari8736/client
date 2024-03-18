@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Heading from "../../utils/Heading";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+
 import {CircularProgress,Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure} from "@nextui-org/react";
 import { createClient,SupabaseClient } from '@supabase/supabase-js';
 import { useRouter } from "next/navigation";
@@ -13,7 +12,7 @@ import Input from "../../../components/input/index";
 import InputRadio from "../../../components/inputRadio/index";
 import InputSelect from "../../../components/inputSelect/index";
 import InputFile from "../../../components/inputFile/index";
-import Loader from "@/app/components/Loader/Loader";
+
 interface SupabaseConfig {
     supabaseUrl: string;
     supabaseKey: string;
@@ -29,11 +28,9 @@ type Props = {};
 
 const Page = (props: Props) => {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
-  const [open, setOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(4);
-  const [route, setRoute] = useState("Login");
+ 
   const router=useRouter();
-  const [isLoading,setIsLoading]=useState(false);
+ 
   const [formSubmitted, setFormSubmitted] = useState(false);
   const supabase = createSupabaseClient({
     supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -197,13 +194,7 @@ const Page = (props: Props) => {
         description="Complete the career form to apply for a position at SpringBee and take the first step towards a fulfilling career in IT consultancy. Tell us about your skills, experience, and aspirations, and let's explore how you can contribute to our dynamic team."
         keywords=" Career application, job application form, IT consultancy careers, apply for a job, career opportunities, IT professionals, SpringBee team, skills and experience"
       />
-      <Header
-        open={open}
-        setOpen={setOpen}
-        activeItem={activeItem}
-        setRoute={setRoute}
-        route={route}
-      />
+   
       <br />
 
     
@@ -295,7 +286,6 @@ const Page = (props: Props) => {
     </div>
  
 
-      <Footer />
     </div>
 
 </>

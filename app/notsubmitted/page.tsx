@@ -1,16 +1,11 @@
 "use client";
-import React, { useState } from "react";
+
 import Heading from "../utils/Heading";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import FAQ from "../components/FAQ/FAQ";
+
 
 type Props = {};
 
 const Page = (props: Props) => {
-  const [open, setOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(0);
-  const [route, setRoute] = useState("Login");
 
   return (
     <div className="min-h-screen">
@@ -19,13 +14,7 @@ const Page = (props: Props) => {
         description=" We're sorry, but it seems like there was an issue with your submission. Please ensure all required fields are filled correctly and try again. If you continue to experience problems, feel free to reach out to us directly via phone or email. Thank you for your understanding."
         keywords="Submission error, form issue, contact problem, SpringBee assistance, IT consultancy support"
       />
-      <Header
-        open={open}
-        setOpen={setOpen}
-        activeItem={activeItem}
-        setRoute={setRoute}
-        route={route}
-      />
+
       <br />
       <div className='mx-auto mt-20 max-w-screen-xl'>
       <title>Form not Submitted SpringBee | SpringBee</title>
@@ -43,7 +32,7 @@ const Page = (props: Props) => {
        
           </div>
            </div>
-      <Footer />
+  
     </div>
   );
 };

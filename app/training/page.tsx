@@ -4,11 +4,10 @@ import { useGetHeroDataQuery } from "@/redux/features/layout/layoutApi";
 import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Loader from "../components/Loader/Loader";
-import Header from "../components/Header";
+
 import Heading from "../utils/Heading";
 import { styles } from "../styles/style";
 import CourseCard from "../components/Course/CourseCard";
-import Footer from "../components/Footer";
 
 type Props = {};
 
@@ -17,8 +16,7 @@ const Page = (props: Props) => {
   const search = searchParams?.get("title");
   const { data, isLoading } = useGetUsersAllCoursesQuery(undefined, {});
   const { data: categoriesData } = useGetHeroDataQuery("Categories", {});
-  const [route, setRoute] = useState("Login");
-  const [open, setOpen] = useState(false);
+  
   const [courses, setcourses] = useState([]);
   const [category, setCategory] = useState("All");
 
@@ -48,13 +46,7 @@ const Page = (props: Props) => {
         <Loader />
       ) : (
         <>
-          <Header
-            route={route}
-            setRoute={setRoute}
-            open={open}
-            setOpen={setOpen}
-            activeItem={2}
-          />
+          
           <div className="w-[95%] md:w-[85%] m-auto min-h-[70vh]">
             <Heading
               title={"Elevate Your Skills with SpringBee Training Programs"}
@@ -105,7 +97,7 @@ const Page = (props: Props) => {
                 ))}
             </div>
           </div>
-          <Footer />
+         
         </>
       )}
     </div>
