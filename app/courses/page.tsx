@@ -2,12 +2,12 @@
 import { useGetUsersAllCoursesQuery } from "@/redux/features/courses/coursesApi";
 import { useGetHeroDataQuery } from "@/redux/features/layout/layoutApi";
 import { useSearchParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Loader from "../components/Loader/Loader";
-
 import Heading from "../utils/Heading";
 import { styles } from "../styles/style";
 import CourseCard from "../components/Course/CourseCard";
+
 
 type Props = {};
 
@@ -47,20 +47,20 @@ const Page = (props: Props) => {
       ) : (
         <>
           
-          <div className="w-[95%] md:w-[85%] m-auto min-h-[70vh]">
+          <div className="w-[95%] 800px:w-[85%] m-auto min-h-[70vh]">
             <Heading
-              title={"Elevate Your Skills with SpringBee Training Programs"}
-              description={" Explore SpringBee's comprehensive training programs designed to enhance your skills and expertise in IT consultancy. From beginner to advanced levels, our courses cover a wide range of topics including MERN stack development, digital strategy implementation, and project management."}
+              title={"All courses - Elearning"}
+              description={"Elearning is a programming community."}
               keywords={
-                " Training programs, IT consultancy, skills enhancement, MERN stack development, digital strategy, project management, SpringBee courses"
+                "programming community, coding skills, expert insights, collaboration, growth"
               }
             />
             <br />
             <div className="w-full flex items-center flex-wrap">
               <div
                 className={`h-[35px] ${
-                  category === "All" ? "bg-[crimson]" : "bg-[#5050cb]"
-                } m-3 px-3 rounded-[30px] flex items-center justify-center font-Poppins cursor-pointer`}
+                  category === "All" ? "bg-[#1b1b1b] dark:bg-[#ffffff] dark:text-black text-white" : "bg-[#ebebeb] dark:bg-[#555555] dark:text-white text-black"
+                } m-3 px-3 rounded-[30px] flex items-center  justify-center font-Poppins cursor-pointer`}
                 onClick={() => setCategory("All")}
               >
                 All
@@ -71,8 +71,8 @@ const Page = (props: Props) => {
                     <div
                       className={`h-[35px] ${
                         category === item.title
-                          ? "bg-[crimson]"
-                          : "bg-[#5050cb]"
+                          ? "bg-[#1b1b1b] dark:bg-[#ffffff] dark:text-black text-white"
+                          : "bg-[#ebebeb] dark:bg-[#555555] dark:text-white text-black"
                       } m-3 px-3 rounded-[30px] flex items-center justify-center font-Poppins cursor-pointer`}
                       onClick={() => setCategory(item.title)}
                     >
@@ -90,14 +90,14 @@ const Page = (props: Props) => {
             }
             <br />
             <br />
-            <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-3 lg:gap-[25px] 1500px:grid-cols-4 1500px:gap-[35px] mb-12 border-0">
+            <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-3 lg:gap-[25px] 1500px:grid-cols-3 1500px:gap-[35px] mb-12 border-0">
               {courses &&
                 courses.map((item: any, index: number) => (
                   <CourseCard item={item} key={index} />
                 ))}
             </div>
           </div>
-         
+          
         </>
       )}
     </div>

@@ -1,16 +1,9 @@
 "use client";
-import React, { useState } from "react";
 import Heading from "../utils/Heading";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import FAQ from "../components/FAQ/FAQ";
 
 type Props = {};
 
 const Page = (props: Props) => {
-  const [open, setOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(0);
-  const [route, setRoute] = useState("Login");
 
   return (
     <div className="min-h-screen">
@@ -19,13 +12,7 @@ const Page = (props: Props) => {
         description=" Your form has been successfully submitted! We appreciate your interest in SpringBee's services. Our team will review your submission and get back to you as soon as possible. If you have any urgent inquiries, feel free to contact us directly. Thank you for choosing SpringBee!"
         keywords=" Form submission, successful submission, SpringBee services, inquiry received, thank you message"
       />
-      <Header
-        open={open}
-        setOpen={setOpen}
-        activeItem={activeItem}
-        setRoute={setRoute}
-        route={route}
-      />
+  
       <br />
       <div className='mx-auto mt-20 max-w-screen-xl'>
       <title>Form Succesfully Submitted SpringBee | SpringBee</title>
@@ -43,7 +30,7 @@ const Page = (props: Props) => {
        
           </div>
            </div>
-      <Footer />
+ 
     </div>
   );
 };

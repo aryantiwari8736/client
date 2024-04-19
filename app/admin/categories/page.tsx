@@ -1,7 +1,7 @@
 "use client";
 import AdminProtected from "@/app/hooks/adminProtected";
 import Heading from "@/app/utils/Heading";
-import React from "react";
+
 import dynamic from "next/dynamic";
 const DynamicAdminSidebar = dynamic(()=> import("../../components/Admin/sidebar/AdminSidebar"),{
   loading:()=><p>loading....</p>,

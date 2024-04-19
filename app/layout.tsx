@@ -1,6 +1,8 @@
 "use client";
 import "./globals.css";
 import {NextUIProvider} from '@nextui-org/react'
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Poppins } from "next/font/google";
 import { Josefin_Sans } from "next/font/google";
 import { ThemeProvider } from "./utils/theme-provider";
@@ -11,6 +13,8 @@ import React, { FC, useEffect } from "react";
 import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
 import Loader from "./components/Loader/Loader";
 import socketIO from "socket.io-client";
+import Footer from "./components/Footer";
+import Header from "./components/Header"
 const ENDPOINT = process.env.NEXT_PUBLIC_SOCKET_SERVER_URI || "";
 const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
 
@@ -31,6 +35,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [open, setOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState(0);
+  const [route, setRoute] = useState("Login");
+  const pathname = usePathname();
+  const text1 = pathname?.split("/")[1];
+  
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
@@ -41,7 +51,22 @@ export default function RootLayout({
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <Custom>
                 <NextUIProvider>
-                <>{children}</>
+                <>
+                {text1 !== "admin" && (
+                    <Header
+                      open={open}
+                      setOpen={setOpen}
+                      activeItem={activeItem}
+                      setRoute={setRoute}
+                      route={route}
+                    />
+                  )}
+                  {children}
+                  {text1 !== "admin" && (
+                    <Footer />
+                  )}
+                </>
+                
                 </NextUIProvider>
               </Custom>
               <Toaster position="top-center" reverseOrder={false} />
