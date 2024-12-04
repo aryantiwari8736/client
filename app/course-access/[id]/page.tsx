@@ -1,20 +1,21 @@
-'use client'
+"use client";
 import Loader from "@/app/components/Loader/Loader";
 import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
 import { redirect } from "next/navigation";
 import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
-const DynamicCourseContent = dynamic(()=> import("../../components/Course/CourseContent"),{
-  loading:()=><p>loading....</p>,
-  ssr:false
-})
+// const DynamicCourseContent = dynamic(()=> import("../../components/Course/CourseContent"),{
+//   loading:()=><p>loading....</p>,
+//   ssr:false
+// })
+import CourseContent from "@/app/components/Course/CourseContent";
 type Props = {
-    params:any;
-}
+  params: any;
+};
 
-const Page = ({params}: Props) => {
-    const id = params.id;
-  const { isLoading, error, data,refetch } = useLoadUserQuery(undefined, {});
+const Page = ({ params }: Props) => {
+  const id = params.id;
+  const { isLoading, error, data, refetch } = useLoadUserQuery(undefined, {});
 
   useEffect(() => {
     if (data) {
@@ -28,21 +29,19 @@ const Page = ({params}: Props) => {
     if (error) {
       redirect("/");
     }
-  }, [data,error]);
+  }, [data, error]);
 
   return (
-   <>
-   {
-    isLoading ? (
+    <>
+      {isLoading ? (
         <Loader />
-    ) : (
+      ) : (
         <div>
-          <DynamicCourseContent id={id} user={data.user} />
+          <CourseContent id={id} user={data.user} />
         </div>
-    )
-   }
-   </>
-  )
-}
+      )}
+    </>
+  );
+};
 
-export default Page
+export default Page;

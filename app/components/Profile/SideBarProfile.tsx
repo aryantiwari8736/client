@@ -22,7 +22,7 @@ const SideBarProfile: FC<Props> = ({
   setActive,
   logOutHandler,
 }) => {
-  console.log('this is the role',user)
+  console.log("this is the role", user);
   return (
     <div className="w-full">
       <div
@@ -50,7 +50,7 @@ const SideBarProfile: FC<Props> = ({
         }`}
         onClick={() => setActive(2)}
       >
-        <RiLockPasswordLine size={20} className="dark:text-white text-black"  />
+        <RiLockPasswordLine size={20} className="dark:text-white text-black" />
         <h5 className="pl-2 md:block hidden font-Poppins dark:text-white text-black">
           Change Password
         </h5>
@@ -61,10 +61,10 @@ const SideBarProfile: FC<Props> = ({
         }`}
         onClick={() => setActive(3)}
       >
-        <SiCoursera size={20} className="dark:text-white text-black"  />
-        {/* <h5 className="pl-2 md:block hidden font-Poppins dark:text-white text-black">
+        <SiCoursera size={20} className="dark:text-white text-black" />
+        <h5 className="pl-2 md:block hidden font-Poppins dark:text-white text-black">
           Enrolled Courses
-        </h5> */}
+        </h5>
       </div>
       {user.role === "admin" && (
         <Link
@@ -73,7 +73,10 @@ const SideBarProfile: FC<Props> = ({
           }`}
           href={"/admin"}
         >
-          <MdOutlineAdminPanelSettings size={20} className="dark:text-white text-black"  />
+          <MdOutlineAdminPanelSettings
+            size={20}
+            className="dark:text-white text-black"
+          />
           <h5 className="pl-2 md:block hidden font-Poppins dark:text-white text-black">
             Admin Dashboard
           </h5>

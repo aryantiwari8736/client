@@ -27,7 +27,7 @@ const CourseDetails = ({
   setRoute,
   setOpen: openAuthModal,
 }: Props) => {
-  const { data: userData,refetch } = useLoadUserQuery(undefined, {});
+  const { data: userData, refetch } = useLoadUserQuery(undefined, {});
   const [user, setUser] = useState<any>();
   const [open, setOpen] = useState(false);
 
@@ -78,10 +78,7 @@ const CourseDetails = ({
             </h1>
             <div>
               {data.benefits?.map((item: any, index: number) => (
-                <div
-                  className="w-full flex md:items-center py-2"
-                  key={index}
-                >
+                <div className="w-full flex md:items-center py-2" key={index}>
                   <div className="w-[15px] mr-1">
                     <IoCheckmarkDoneOutline
                       size={20}
@@ -221,7 +218,7 @@ const CourseDetails = ({
                   {data.price === 0 ? "Free" : data.price + "$"}
                 </h1>
                 <h5 className="pl-3 text-[20px] mt-2 line-through opacity-80 text-black dark:text-white">
-                  {data.estimatedPrice}$
+                  {data.estimatedPrice + " "}INR
                 </h5>
 
                 <h4 className="pl-5 pt-4 text-[22px] text-black dark:text-white">
@@ -276,7 +273,12 @@ const CourseDetails = ({
               <div className="w-full">
                 {stripePromise && clientSecret && (
                   <Elements stripe={stripePromise} options={{ clientSecret }}>
-                    <CheckOutForm setOpen={setOpen} data={data} user={user} refetch={refetch} />
+                    <CheckOutForm
+                      setOpen={setOpen}
+                      data={data}
+                      user={user}
+                      refetch={refetch}
+                    />
                   </Elements>
                 )}
               </div>

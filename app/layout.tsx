@@ -1,6 +1,6 @@
 "use client";
 import "./globals.css";
-import {NextUIProvider} from '@nextui-org/react'
+import { NextUIProvider } from "@nextui-org/react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Poppins } from "next/font/google";
@@ -14,7 +14,7 @@ import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
 import Loader from "./components/Loader/Loader";
 import socketIO from "socket.io-client";
 import Footer from "./components/Footer";
-import Header from "./components/Header"
+import Header from "./components/Header";
 const ENDPOINT = process.env.NEXT_PUBLIC_SOCKET_SERVER_URI || "";
 const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
 
@@ -39,8 +39,33 @@ export default function RootLayout({
   const [activeItem, setActiveItem] = useState(0);
   const [route, setRoute] = useState("Login");
   const pathname = usePathname();
-  const text1 = pathname?.split("/")[1];
-  
+  const text1 = pathname?.split("/")[1] || "";
+
+  type RouteKey =
+    | ""
+    | "about"
+    | "corporat"
+    | "courses"
+    | "products"
+    | "croducts"
+    | "career"
+    | "contact";
+
+  useEffect(() => {
+    const routeMap: Record<RouteKey, number> = {
+      "": 0,
+      about: 1,
+      corporat: 2,
+      courses: 3,
+      products: 4,
+      croducts: 4,
+      career: 5,
+      contact: 6,
+    };
+
+    setActiveItem(routeMap[text1 as RouteKey] || 0);
+  }, [pathname, text1]);
+
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
@@ -51,22 +76,19 @@ export default function RootLayout({
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <Custom>
                 <NextUIProvider>
-                <>
-                {text1 !== "admin" && (
-                    <Header
-                      open={open}
-                      setOpen={setOpen}
-                      activeItem={activeItem}
-                      setRoute={setRoute}
-                      route={route}
-                    />
-                  )}
-                  {children}
-                  {text1 !== "admin" && (
-                    <Footer />
-                  )}
-                </>
-                
+                  <>
+                    {text1 !== "admin" && (
+                      <Header
+                        open={open}
+                        setOpen={setOpen}
+                        activeItem={activeItem}
+                        setRoute={setRoute}
+                        route={route}
+                      />
+                    )}
+                    {children}
+                    {text1 !== "admin" && <Footer />}
+                  </>
                 </NextUIProvider>
               </Custom>
               <Toaster position="top-center" reverseOrder={false} />

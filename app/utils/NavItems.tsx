@@ -18,9 +18,14 @@ export const navItemsData = [
     name: "About",
     url: "/about",
   },
+
   {
     name: "Corporate",
     url: "/corporat",
+  },
+  {
+    name: "Courses",
+    url: "/courses",
   },
   {
     name: "Products",
@@ -58,35 +63,34 @@ const NavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
                 {i.name}
               </span>
             </Link>
-            
           ))}
       </div>
       {isMobile && (
         <div className="md:hidden mt-5">
-          <Sheet >
-            <SheetTrigger className="mb-4 mr-2"> 
-            <HiOutlineMenuAlt3
-                  size={25}
-                  className="cursor-pointer dark:text-white  text-black"
-                /></SheetTrigger>
+          <Sheet>
+            <SheetTrigger className="mb-4 mr-2">
+              <HiOutlineMenuAlt3
+                size={25}
+                className="cursor-pointer dark:text-white  text-black"
+              />
+            </SheetTrigger>
             <SheetContent>
               <SheetHeader>
                 <SheetTitle className="my-4">SpringBee</SheetTitle>
               </SheetHeader>
               <nav className="flex items-center justify-center flex-col gap-7">
-
-              
-              {navItemsData&&navItemsData.map((item,index)=>(
-                <Link href={`${item.url}`} key={index} passHref>
-                <span
-                  className={`${
-                    activeItem === index ? "text-[#003777]" : "tex-black"
-                  } text-[18px] px-6 font-Poppins font-[400]`}
-                >
-                  {item.name}
-                </span>
-              </Link>
-              ))}
+                {navItemsData &&
+                  navItemsData.map((item, index) => (
+                    <Link href={`${item.url}`} key={index} passHref>
+                      <span
+                        className={`${
+                          activeItem === index ? "text-[#003777]" : "tex-black"
+                        } text-[18px] px-6 font-Poppins font-[400]`}
+                      >
+                        {item.name}
+                      </span>
+                    </Link>
+                  ))}
               </nav>
             </SheetContent>
           </Sheet>
